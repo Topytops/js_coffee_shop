@@ -69,15 +69,19 @@
 
     function makeCoffee(){
         logo.setAttribute('src', 'static/coffee_machine.jpg');
-        setTimeout(alertMe, 500);
+        setTimeout(getCoffeeCup, 1000);
+        setTimeout(alertMe, 2500); // time needs to be total time
     }
     logo.addEventListener('click', makeCoffee);    
+
+    function getCoffeeCup(){
+        logo.setAttribute('src', 'static/coffee_mug.jpg');
+    }
 
     var alertMe = function() {
         logo.setAttribute('src', 'static/coffee_beans.jpg');
     }
-    setTimeout(alertMe, 500);
-    // setInterval(alertMe, 500);
+
 </script>
 
 </body>
